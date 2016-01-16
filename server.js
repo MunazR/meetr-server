@@ -1,6 +1,9 @@
 var express = require('express');
 var routes = require('./routes/app');
 var bodyParser = require('body-parser');
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/meetr');
 
 var app = express();
 
