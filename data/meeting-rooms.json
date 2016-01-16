@@ -1,0 +1,16 @@
+[{
+  "name": "ECE Homebase",
+  "description": "A spacious room for ECE students",
+  "location": "EIT 1015",
+  "bookings": []
+},{
+  "name": "DeltaHacks Hacking Room",
+  "description": "The perfect place to hack",
+  "location": "Room 303",
+  "bookings": []
+},{
+  "name": "Engineering 5",
+  "description": "Waterloo's finest engineering rom",
+  "location": "Room 1337",
+  "bookings": []
+}]
