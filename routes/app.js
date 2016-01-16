@@ -87,13 +87,15 @@ exports.bookMeetingRoomById = function(req, res) {
   var roomId = req.body.id;
   var startTime = new Date(req.body.startTime);
   var endTime = new Date(req.body.endTime);
+  var userId = req.body.userId;
   var query = {
     _id: roomId
   };
 
   var booking = {
     startTime: startTime,
-    endTime: endTime
+    endTime: endTime,
+    userId: userId
   };
 
   var update = {
