@@ -5,7 +5,7 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var config = require('./config');
 var db = monk(config.db.uri + ':' + config.db.port + '/' + config.db.name);
-
+var port = process.env.PORT || config.port;
 var app = express();
 
 app.use(bodyParser.json());
@@ -21,5 +21,5 @@ app.post('/meetingRoomById', routes.getAllMeetingRoomsById);
 app.post('/bookMeetingRoomById', routes.bookMeetingRoomById);
 app.post('/addMeetingRoom', routes.addMeetingRoom);
 
-app.listen(config.port);
-console.log('Listening on port ' + config.port + '...');
+app.listen(port);
+console.log('Listening on port ' + port + '...');
