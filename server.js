@@ -3,7 +3,8 @@ var routes = require('./routes/app');
 var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/meetr');
+var config = require('./config');
+var db = monk(config.db.uri + ':' + config.db.port + '/' + config.db.name);
 
 var app = express();
 
@@ -20,5 +21,5 @@ app.post('/meetingRoomById', routes.getAllMeetingRoomsById);
 app.post('/bookMeetingRoomById', routes.bookMeetingRoomById);
 app.post('/addMeetingRoom', routes.addMeetingRoom);
 
-app.listen(3000);
-console.log('Listening on port 3000...');
+app.listen(config.port);
+console.log('Listening on port ' + config.port + '...');

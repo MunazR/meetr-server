@@ -1,0 +1,8 @@
+{
+  "db": {
+    "uri": "localhost",
+    "port": "27017",
+    "name": "meetr"
+  },
+  "port": 3000
+}
