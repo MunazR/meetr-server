@@ -1,0 +1,33 @@
+{
+  "id": "5d0adb57-22fa-9fc4-47d7-d456d4b7ab0c",
+  "name": "meetr",
+  "description": "Postman collection for meetr\n",
+  "order": [
+    "112332c0-5337-d998-2634-de3503485612"
+  ],
+  "folders": [],
+  "timestamp": 1452974255471,
+  "owner": 0,
+  "remoteLink": "",
+  "public": false,
+  "requests": [{
+    "id": "112332c0-5337-d998-2634-de3503485612",
+    "headers": "",
+    "url": "localhost:3000/health",
+    "pathVariables": {},
+    "preRequestScript": "",
+    "method": "GET",
+    "collectionId": "5d0adb57-22fa-9fc4-47d7-d456d4b7ab0c",
+    "data": [],
+    "dataMode": "params",
+    "name": "Health",
+    "description": "Gets health",
+    "descriptionFormat": "html",
+    "time": 1452975759759,
+    "version": 2,
+    "responses": [],
+    "tests": "",
+    "currentHelper": "normal",
+    "helperAttributes": {}
+  }]
+}
