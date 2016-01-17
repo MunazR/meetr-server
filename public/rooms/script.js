@@ -15,8 +15,8 @@ $(function () {
             var now = new Date();
 
             if(start <= now && end >= now) isAvailable = false;
-            data[i].bookings[j].start = start.toDateString();
-            data[i].bookings[j].end = end.toDateString();
+            data[i].bookings[j].start = start.toLocaleString();
+            data[i].bookings[j].end = end.toLocaleString();
 
             if(end < now) toDelete.push(j);
           };
