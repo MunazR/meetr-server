@@ -1,5 +1,5 @@
 # meetr-server
-Backend for Meetr.io (DeltaHacks 2016)
+Backend and web frontend for Meetr.io (DeltaHacks 2016)
 
 ## Description
 Meetr is an application aimed to improve sustainability by adjusting the temperature in office rooms using Nest. Users can book meeting rooms in the workplace through the companion Android app. Meetr will automatically warm up the meeting room to an appropriate temperature and unlock the door to the room using Nest cloud services. After the meeting is complete Meetr will automatically lock the door and readjust the temperature on the Nest thermostat to conserve energy.
@@ -22,9 +22,28 @@ Meetr Server uses the following
 + HTML/CSS/Javascript (Frontend)
 
 ## Contributors
-Meetr was developed during [DeltaHacks](http://deltahacks.com/) 2016.
+Meetr was developed during [DeltaHacks](http://deltahacks.com/) 2016 at McMaster University. View our submission [here](http://devpost.com/software/meetr)!
 
 + [Munaz Rahman](https://github.com/MunazR) - Backend
 + [Tim Mui](https://github.com/timmui) - Hardware
 + [Marwan Ahmed](https://github.com/marwanad) - Android
 + [Abdallah Arar](https://github.com/abdallaharar) - Frontend
+
+## Images
+### Nest Thermostat
+![Nest Thermostat](https://github.com/MunazR/meetr-server/blob/master/images/nest-thermostat.JPG)
+
+### Door Lock
+![Door Lock](https://github.com/MunazR/meetr-server/blob/master/images/door-lock-beacon.JPG)
+
+### Android Home
+![Android Home](https://github.com/MunazR/meetr-server/blob/master/images/screenshots/android-home.jpg)
+
+### Android Booking
+![Android Booking](https://github.com/MunazR/meetr-server/blob/master/images/screenshots/android-booking.jpg)
+
+### Web Frontend Home
+![Web Frontend Home](https://github.com/MunazR/meetr-server/blob/master/images/screenshots/web-frontend-home.png)
+
+### Web Frontend Rooms
+![Web Frontend Rooms](https://github.com/MunazR/meetr-server/blob/master/images/screenshots/web-frontend-rooms.jpg)
