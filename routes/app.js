@@ -121,7 +121,7 @@ exports.bookMeetingRoomById = function(req, res) {
 
   var date = new Date(startTime - 600000);
   schedule.scheduleJob(date, function() {
-    return http.get({
+    http.get({
       host: 'maker.ifttt.com',
       path: '/trigger/temp_on/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
     }, function(response) {
@@ -139,7 +139,7 @@ exports.bookMeetingRoomById = function(req, res) {
       console.log('Turned temperature off');
     });
 
-    return http.get({
+    http.get({
       host: 'maker.ifttt.com',
       path: '/trigger/door_lock/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
     }, function(response) {
