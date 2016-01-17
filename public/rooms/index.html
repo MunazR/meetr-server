@@ -56,7 +56,7 @@
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Rooms</span>
+        <span class="mdl-layout-title">Meeting Room Availability</span>
         <div class="mdl-layout-spacer"></div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -86,11 +86,10 @@
             <span class="visuallyhidden">Accounts</span>
           </button>
           <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-            <li class="mdl-menu__item">abood@projectmeetr.com</li>
-            <li class="mdl-menu__item">tim@projectmeetr.com</li>
-            <li class="mdl-menu__item">marwan@projectmeetr.com</li>
-            <li class="mdl-menu__item">munaz@projectmeetr.com</li>
-            <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+            <li class="mdl-menu__item">abood@meetr.io</li>
+            <li class="mdl-menu__item">tim@meetr.io</li>
+            <li class="mdl-menu__item">marwan@meetr.io</li>
+            <li class="mdl-menu__item">munaz@meetr.io</li>
           </ul>
         </div>
       </header>
@@ -103,22 +102,32 @@
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
       <script id="cards-template" type="text/x-handlebars-template">
-      {{#each people}}
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-                <div style='height:200px;overflow:hidden' class="mdl-card__media">
-                  <img style='object-fit: cover;height:100%' src="{{image}}">
+      {{#each room}}
+        <div style="position-relative" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                <div style='height:150px;overflow:hidden' class="mdl-card__media">
+                  <img style='object-fit: cover;width:100%' src="{{image}}">
                 </div>
                 <div class="mdl-card__title">
                    <h4 class="mdl-card__title-text">{{name}} ({{location}})</h4>
                 </div>
                 <div class="mdl-card__supporting-text">
-                  <span class="mdl-typography--font-light mdl-typography--subhead">{{description}}</span>
+                  <span class="mdl-typography--font-light mdl-typography--subhead">
+                  <h5 style="text-align:center">Bookings</h5>
+                  
+                  {{#each bookings}}
+                  <hr>
+                  <strong>From:</strong>
+                  {{start}}
+                  <br>
+                  <strong>To:</strong>
+                  {{end}}
+                  
+                  {{/each}}
+                  <hr>
+                  </span>
                 </div>
-                <div class="mdl-card__actions">
-                   <a style="" class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
-                     Status: Available
-                     <i class="material-icons">chevron_right</i>
-                   </a>
+                <div style="position:absolute;bottom:0" class="mdl-card__actions mdl-button mdl-js-button mdl-typography--text-uppercase">
+                     <span class='color:{{color}}!important'>{{availEng}}<span>
                 </div>
               </div>
         {{/each}}

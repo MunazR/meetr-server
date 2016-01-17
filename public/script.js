@@ -19,14 +19,20 @@ $(function () {
           data[i].available = isAvailable;
         }
 
-        // get availability numbers
+        // get availability numbers & set availability tags
         var available = 0;
         var reserved = 0;
         for (var i = 0; i < data.length; i++) {
-          if (data[i].available)
+          if (data[i].available){
             available++;
-          else
+            data[i].availEng = "Available"
+            data[i].color = 'color: rgb(76, 175, 80)';
+          } else {
             reserved++;
+            data[i].availEng = "Reserved"
+            data[i].color = 'color: rgb(233, 30, 99);';
+          }
+
         }
 
         // Run google chart
@@ -59,6 +65,15 @@ $(function () {
           var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
           chart.draw(data, options);
         }
+
+
+        // load table
+
+        var theTemplateScript = $("#trs-template").html();
+        var theTemplate = Handlebars.compile(theTemplateScript);
+        var context = {room:data}
+        var theCompiledHtml = theTemplate(context);
+        $('#trs-placeholder').html(theCompiledHtml);
       } 
     })
     .always(function(data) {
