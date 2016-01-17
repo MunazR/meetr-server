@@ -10,7 +10,7 @@ var port = process.env.PORT || config.port;
 var app = express();
 
 app.use(bodyParser.json());
-
+app.use(express.static('public'));
 app.use(function(req, res, next) {
   req.db = db;
   next();
