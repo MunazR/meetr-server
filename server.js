@@ -18,6 +18,7 @@ app.use(function(req, res, next) {
 
 app.get('/health', routes.getHealth);
 app.get('/meetingRooms', routes.getAllMeetingRooms);
+app.get('/unlockDoor', routes.unlockDoor);
 app.post('/meetingRoomById', routes.getAllMeetingRoomsById);
 app.post('/bookMeetingRoomById', routes.bookMeetingRoomById);
 app.post('/addMeetingRoom', routes.addMeetingRoom);

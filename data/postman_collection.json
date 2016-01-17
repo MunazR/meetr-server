@@ -6,7 +6,8 @@
     "112332c0-5337-d998-2634-de3503485612",
     "05e5342f-47d1-1029-3b60-c7b28ad102be",
     "9339edf2-927c-1abe-99f1-12e9007808c4",
-    "f04a9187-b41d-7a7f-8e1f-ad05dd3f7aab"
+    "f04a9187-b41d-7a7f-8e1f-ad05dd3f7aab",
+    "49cf880a-449a-bb99-849d-1d128e38740f"
   ],
   "folders": [],
   "timestamp": 1452974255471,
@@ -50,6 +51,25 @@
     "description": "Gets health",
     "collectionId": "5d0adb57-22fa-9fc4-47d7-d456d4b7ab0c",
     "responses": []
+  }, {
+    "id": "49cf880a-449a-bb99-849d-1d128e38740f",
+    "headers": "",
+    "url": "localhost:3000/unlockDoor",
+    "pathVariables": {},
+    "preRequestScript": "",
+    "method": "GET",
+    "collectionId": "5d0adb57-22fa-9fc4-47d7-d456d4b7ab0c",
+    "data": [],
+    "dataMode": "params",
+    "name": "Unlock Door",
+    "description": "Unlocks the door to the meeting room",
+    "descriptionFormat": "html",
+    "time": 1452997050928,
+    "version": 2,
+    "responses": [],
+    "tests": "",
+    "currentHelper": "normal",
+    "helperAttributes": {}
   }, {
     "id": "9339edf2-927c-1abe-99f1-12e9007808c4",
     "headers": "",

@@ -129,12 +129,35 @@ exports.bookMeetingRoomById = function(req, res) {
     });
   });
 
+  console.log("Temperature scheduled to turn on at " + date.toLocaleString());
+
   schedule.scheduleJob(endTime, function() {
-    return http.get({
+    http.get({
       host: 'maker.ifttt.com',
       path: '/trigger/temp_off/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
     }, function(response) {
       console.log('Turned temperature off');
     });
+
+    return http.get({
+      host: 'maker.ifttt.com',
+      path: '/trigger/door_lock/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
+    }, function(response) {
+      console.log('Locked door');
+    });
   });
-}
+};
+
+exports.unlockDoor = function(req, res) {
+  return http.get({
+    host: 'maker.ifttt.com',
+    path: '/trigger/door_unlock/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
+  }, function(response) {
+    console.log('Unlocked door');
+
+    return res.send(200, {
+      status: "OK",
+      message: "Door unlocked"
+    });
+  });
+};
