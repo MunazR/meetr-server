@@ -129,7 +129,7 @@ exports.bookMeetingRoomById = function(req, res) {
     });
   });
 
-  schedule.scheduleJob(date, function() {
+  schedule.scheduleJob(endTime, function() {
     return http.get({
       host: 'maker.ifttt.com',
       path: '/trigger/temp_off/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
