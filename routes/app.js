@@ -25,10 +25,7 @@ exports.getAllMeetingRooms = function(req, res) {
       });
     }
 
-    res.send(200, {
-      status: "OK",
-      data: data
-    });
+    res.send(200, data);
   });
 };
 
