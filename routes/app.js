@@ -123,7 +123,7 @@ exports.bookMeetingRoomById = function(req, res) {
   schedule.scheduleJob(date, function() {
     http.get({
       host: 'maker.ifttt.com',
-      path: '/trigger/temp_on/with/key/bjHb7A3FK7TuhjtgC_uBvl'
+      path: '/trigger/temp_on/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
     }, function(response) {
       console.log('Turned temperature on');
     });
@@ -134,7 +134,7 @@ exports.bookMeetingRoomById = function(req, res) {
   schedule.scheduleJob(endTime, function() {
     http.get({
       host: 'maker.ifttt.com',
-      path: '/trigger/temp_off/with/key/bjHb7A3FK7TuhjtgC_uBvl'
+      path: '/trigger/temp_off/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
     }, function(response) {
       console.log('Turned temperature off');
     });
