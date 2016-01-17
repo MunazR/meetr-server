@@ -1,3 +1,6 @@
+var schedule = require('node-schedule');
+var http = require('http');
+
 exports.getHealth = function(req, res) {
   res.send(200, {
     server: "OK"
@@ -113,6 +116,25 @@ exports.bookMeetingRoomById = function(req, res) {
       status: "OK",
       message: "Added booking",
       data: data
+    });
+  });
+
+  var date = new Date(startTime - 600000);
+  schedule.scheduleJob(date, function() {
+    return http.get({
+      host: 'maker.ifttt.com',
+      path: '/trigger/temp_on/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
+    }, function(response) {
+      console.log('Turned temperature on');
+    });
+  });
+
+  schedule.scheduleJob(date, function() {
+    return http.get({
+      host: 'maker.ifttt.com',
+      path: '/trigger/temp_off/with/key/bYMyY5nnx8XpYK4gqwy7Bj'
+    }, function(response) {
+      console.log('Turned temperature off');
     });
   });
 }
