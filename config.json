@@ -1,8 +1,10 @@
 {
   "db": {
-    "uri": "localhost",
-    "port": "27017",
-    "name": "meetr"
+    "uri": "ds047085.mongolab.com",
+    "port": "47085",
+    "name": "meetr",
+    "user": "admin",
+    "password": "password"
   },
   "port": 3000
 }

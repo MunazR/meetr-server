@@ -4,7 +4,8 @@ var bodyParser = require('body-parser');
 var mongo = require('mongodb');
 var monk = require('monk');
 var config = require('./config');
-var db = monk(config.db.uri + ':' + config.db.port + '/' + config.db.name);
+var db = monk(config.db.user + ":" +
+  config.db.password + "@" + config.db.uri + ':' + config.db.port + '/' + config.db.name);
 var port = process.env.PORT || config.port;
 var app = express();
 

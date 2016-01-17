@@ -65,7 +65,7 @@ exports.addMeetingRoom = function(req, res) {
   var collection = db.get('meetingRooms');
   var room = req.body;
 
-  collection.insertOne(room, function(err, data) {
+  collection.insert(room, function(err, data) {
     if (err) {
       return res.send(500, {
         status: "Error",
