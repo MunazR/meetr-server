@@ -1,10 +1,12 @@
 # meetr-server
 Backend and web frontend for Meetr.io (DeltaHacks 2016)
 
+View the companion Android app [here](https://github.com/marwanad/Meetr)!
+
 ## Description
 Meetr is an application aimed to improve sustainability by adjusting the temperature in office rooms using Nest. Users can book meeting rooms in the workplace through the companion Android app. Meetr will automatically warm up the meeting room to an appropriate temperature and unlock the door to the room using Nest cloud services. After the meeting is complete Meetr will automatically lock the door and readjust the temperature on the Nest thermostat to conserve energy.
 
-View the companion Android app [here](https://github.com/marwanad/Meetr)!
+Watch this [video](https://youtu.be/1rF3wbO1Z7s) of it in use!
 
 ## Starting Server
 You will first need to install [Node](https://nodejs.org/en/) and have a an instance of [MongoDB](https://www.mongodb.org/) running. To start up the application adjust the [configuration](https://github.com/MunazR/meetr-server/blob/master/config.json) file with your own database credentials. Use the following commands to start up the Meetr server.
